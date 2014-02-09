@@ -1,0 +1,30 @@
+button#back {
+  background: url('images/Back_button.png');
+  width: <194>;
+  height: <55>;
+  border: 0;
+}
+
+button#back:hover {
+  background: url('images/Back_button_hover.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button:focus{
+outline:none;
+}
+
+body
+{
+background-image:url('images/Rain_menu.gif');
+background-repeat:no-repeat;
+background-position:left top;
+}
+
+button#back:active {
+  background: url('images/Back_button_click.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;

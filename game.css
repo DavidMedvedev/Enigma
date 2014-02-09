@@ -1,0 +1,68 @@
+ div { display: none; }
+
+
+button#back {
+  background: url('images/Back_button.png');
+  width: <194>;
+  height: <55>;
+  border: 0;
+}
+
+button#help {
+  background: url('images/Help_button.png');
+  width: <194>;
+  height: <55>;
+  border: 0;
+}
+
+#areaDesc {
+	display: block;
+	}
+
+button#back:hover {
+  background: url('images/Back_button_hover.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button#help:hover {
+  background: url('images/Help_button_hover.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button:focus{
+outline:none;
+}
+
+body
+{
+background-image:url('images/Rain_menu.gif');
+background-repeat:no-repeat;
+background-position:left top;
+}
+
+input:focus{
+outline:none;
+}
+
+input#nameBox{
+border: 0px
+}
+
+button#help:active {
+  background: url('images/help_button_click.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+  }
+
+    
+button#back:active {
+  background: url('images/Back_button_click.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+  }

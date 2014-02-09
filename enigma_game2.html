@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Enigma</title>
+		<link rel="stylesheet" href="game.css" type="text/css" />
+	<style>
+	</style>
+	<script type="text/javascript" src="action2.js"></script>
+	</head>
+
+	<body onload="start();">
+
+		<img src="images/Enigma_game22.png" style="position: absolute; left: 0px; top: 0px; alt="enigma_game">
+
+		<input style="height:35px; width:180px; position: absolute; left: 390px; top: 116px; background-color:transparent; font-size:20px;" value="Enter Name Here" id="nameBox" type="text">
+	
+		<div style="height:50px; width:480px; position: absolute; left: 200px; top: 180px; display:block;" id="areaName"></div>
+		<div style="height:50px; width:480px; position: absolute; left: 200px; top: 210px; display:block;" id="areaDesc"></div>
+		
+		<input style="width: 400px; position: absolute; left: 200px; top: 270px; display:block; background-color:transparent;" value ="Enter commands here" id="commandBox" type="text">
+		<input style="width: 50px; position: absolute; left: 610px; top: 270px; display:block; background-color:transparent;" value ="Go" id="goBox" type="button" onclick="command()">
+		
+		
+		<div style="position: absolute; left: 200px; top: 300px;" id="page0">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="toWest1();nextPage4(0)"> Go West </button>
+			<button style="position: absolute; left: 180px; top: 260;" onclick="noGo();" disabled="disabled"> Go North </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="noGo();" disabled="disabled"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="toEast1();nextPage(0);"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 395px; top: 260;" onclick="helpMe();"> Help </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchCrashArea();"> Search Area </button>
+		</div>
+	
+		<div style="position: absolute; left: 200px; top: 300px;" id="page1">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="crashSite();prevPage(1)"> Go West </button>
+			<button style="position: absolute; left: 180px; top: 260;" onclick="noGo()" disabled="disabled"> Go North </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="noGo();" disabled="disabled"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="toEast2();nextPage(1)"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchArea();"> Search Area </button>
+		</div>
+	
+		<div style="position: absolute; left: 200px; top: 300px;" id="page2">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="toEast1();prevPage(2)"> Go West </button>
+			<button style="position: absolute; left: 180px; top: 260;" onclick="noGo()" disabled="disabled"> Go North </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="noGo();" disabled="disabled"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="noGo()" disabled="disabled"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchRaftArea();"> Search Area </button>
+		</div>
+	
+		<div style="position: absolute; left: 200px; top: 300px;" id="page4">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="toWest2();nextPage4(4)"> Go West </button>
+			<button style="position: absolute; left: 180px; top: 260;" onclick="noGo()" disabled="disabled"> Go North </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="noGo();" disabled="disabled"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="crashSite();prevPage4(4);"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchArea();"> Search Area </button>
+		</div>
+	
+		<div style="position: absolute; left: 200px; top: 300px;" id="page8">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="noGo();" disabled="disabled"> Go West </button>
+			<button style="position: absolute; left: 180px; top: 260;" onclick="toNorth1();nextPage4(8);"> Go North </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="noGo();" disabled="disabled"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="toWest1();prevPage4(8);"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchWellArea();"> Search Area </button>
+		</div>
+	
+		<div style="position: absolute; left: 200px; top: 300px;" id="page12">
+			<button style="position: absolute; left: 130px; top: 260;" onclick="noGo()" disabled="disabled"> Go West </button>
+			<button style="position: absolute; left: 177px; top: 260;" onclick="escapeIsland()"> Climb Down! </button>
+			<button style="position: absolute; left: 228px; top: 260;" onclick="toWest2();prevPage4(12);"> Go South </button>
+			<button style="position: absolute; left: 280px; top: 260;" onclick="noGo()" disabled="disabled"> Go East </button>
+			<button style="position: absolute; left: 325px; top: 260;" onclick="showInv();"> Inventory </button>
+			<button style="position: absolute; left: 70px; top: 260;" onclick="searchArea();"> Search Area </button>
+		</div>
+	
+	
+		<button id="back" style="height:55px; width:194px; position: absolute; left: 75px; top: 375px;" onclick = "location.href='enigm_home.html'"></button>
+		<button id="help" style="height:55px; width:194px; position: absolute; left: 325px; top: 375px;" onclick = "helpMe();"></button>
+
+		<embed id="game_music" src="music/Game_music.mp3" hidden="true">
+	</body>
+</html>

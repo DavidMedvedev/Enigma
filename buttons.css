@@ -1,0 +1,52 @@
+button#start {
+  background: url('images/Start_button.png');
+  width: <194>;
+  height: <55>;
+  border: 0;
+}
+
+button#credits {
+  background: url('images/Credit_button.png');
+  width: <194>;
+  height: <55>;
+  border: 0;
+}
+
+button#start:hover {
+  background: url('images/Start_button_hover.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button#credits:hover {
+  background: url('images/Credit_button_hover.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button#start:active {
+  background: url('images/Start_button_click.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button#credits:active {
+  background: url('images/Credit_button_click.png');
+  width: <194>;
+  height: <55 >;
+  border: 0;
+}
+
+button:focus{
+outline:none;
+}
+
+body
+{
+background-image:url('images/Rain_Menu.gif');
+background-repeat:no-repeat;
+background-position:left top;
+}
